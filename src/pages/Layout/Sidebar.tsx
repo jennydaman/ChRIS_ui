@@ -72,6 +72,14 @@ const Sidebar: React.FC<AllProps> = ({
             <Link to="/pipelines">Pipelines</Link>
           </NavItem>
 
+          <NavItem
+            itemId="uploadHack"
+            isActive={sidebarActiveItem === "uploadHack"}
+          >
+            <Link to="/uploadHack">Single Large File Upload</Link>
+          </NavItem>
+
+
           {process.env.REACT_APP_ALPHA_FEATURES === "development" && (
             <NavItem
               itemId="workflows"
@@ -113,7 +121,7 @@ const Sidebar: React.FC<AllProps> = ({
             </>
           )}
         </NavGroup>
-          
+
           */}
 
         {process.env.REACT_APP_ALPHA_FEATURES === "development" && (

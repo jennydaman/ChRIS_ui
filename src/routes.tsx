@@ -7,6 +7,7 @@ import { NotFoundPage as NotFound } from "./pages/NotFound/NotFound";
 import Wrapper from "./pages/Layout/PageWrapper";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import FeedsPage from "./pages/Feeds/Feeds";
+import UploadHack from "./pages/UploadHack/UploadHack";
 
 import Library, { Series } from "./pages/DataLibrary/Library";
 import SignUp from "./pages/SignUp/SignUp";
@@ -48,6 +49,14 @@ export const MainRouter: React.FC = () => {
   };
 
   const element = useRoutes([
+    {
+      path: "/uploadHack",
+      element: (
+        <PrivateRoute>
+          <UploadHack />
+        </PrivateRoute>
+      )
+    },
     {
       path: "/",
       element: (
