@@ -1,14 +1,16 @@
-import { PageSection, Title, FileUpload, Button } from "@patternfly/react-core";
+import { PageSection, Title, FileUpload, Button, CodeBlock, CodeBlockCode } from "@patternfly/react-core";
 import React from "react";
 import Wrapper from "../Layout/PageWrapper";
 import axios from "axios";
 import ChrisAPIClient from "../../api/chrisapiclient";
+import { Progress, ProgressSize } from '@patternfly/react-core';
 
 const UploadHack = () => {
 
   const [filename, setFilename] = React.useState('');
   const [file, setFile] = React.useState<File>();
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [progressValue, setProgressValue] = React.useState(0);
+  const [progressMax, setProgressMax] = React.useState(1);
   const [result, setResult] = React.useState('not doing anything');
 
   const client = ChrisAPIClient.getClient();
@@ -31,9 +33,17 @@ const UploadHack = () => {
     formData.append('fname', file, file.name);
 
     await client.setUrls(); // mutability nonsense
-    const config = {headers: {Authorization: 'Token ' + client.auth.token}};
+    const config = {
+      //
+      headers: {Authorization: 'Token ' + client.auth.token},
+      // https://github.com/axios/axios/blob/9588fcdec8aca45c3ba2f7968988a5d03f23168c/examples/upload/index.html#L29
+      onUploadProgress: (progressEvent: any) => {
+        setProgressValue(progressEvent.loaded);
+        setProgressMax(progressEvent.total);
+      }
+    };
     const res = await axios.post(client.uploadedFilesUrl, formData, config);
-    setResult(`finished: ${JSON.stringify(res.data)}`)
+    setResult(`finished\n\n${JSON.stringify(res.data, null, 4)}`);
   }
 
   return (
@@ -44,7 +54,22 @@ const UploadHack = () => {
         </Title>
 
         <p>
-          Upload URL: {client.uploadedFilesUrl}
+          How it works:
+
+          <ol>
+            <li>Click the &ldquo;Upload&rdquo; button and select a file.</li>
+            <li>Click the &ldquo;Submit&rdquo; button to start the upload.</li>
+            <li>Watch the progress bar move as the file is streamed from your disk.</li>
+            <li>
+              After the progress bar fills up, wait a few more seconds while
+              CUBE is processing your file (flushing data from Python&apos;s
+              cache into object storage).
+            </li>
+            <li>
+              Successful response from CUBE will be displayed below the progress
+              bar after CUBE is completely finished responding.
+            </li>
+          </ol>
         </p>
 
         <FileUpload
@@ -52,7 +77,6 @@ const UploadHack = () => {
           filename={filename}
           filenamePlaceholder="Drag and drop a file or upload a large file"
           onFileInputChange={handleFileInputChange}
-          isLoading={isLoading}
           allowEditingUploadedText={false}
           browseButtonText="Upload"
           onClearClick={(e) => setFile(undefined)}
@@ -66,9 +90,18 @@ const UploadHack = () => {
           Submit
         </Button>
 
-        <p>
-          {result}
-        </p>
+        <Progress
+          value={progressValue}
+          max={progressMax}
+          title="Upload Progress"
+          size={ProgressSize.lg} />
+
+
+        <CodeBlock>
+          <CodeBlockCode>
+            {result}
+          </CodeBlockCode>
+        </CodeBlock>
 
       </PageSection>
     </Wrapper>
