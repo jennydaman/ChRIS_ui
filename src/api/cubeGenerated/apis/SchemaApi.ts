@@ -63,7 +63,7 @@ export class SchemaApi extends runtime.BaseAPI implements SchemaApiInterface {
             queryParameters['lang'] = requestParameters['lang'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);

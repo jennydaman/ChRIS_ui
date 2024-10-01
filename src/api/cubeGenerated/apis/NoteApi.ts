@@ -98,7 +98,7 @@ export class NoteApi extends runtime.BaseAPI implements NoteApiInterface {
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -142,9 +142,9 @@ export class NoteApi extends runtime.BaseAPI implements NoteApiInterface {
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);

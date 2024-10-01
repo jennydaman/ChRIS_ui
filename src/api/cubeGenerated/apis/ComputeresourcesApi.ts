@@ -131,7 +131,7 @@ export class ComputeresourcesApi extends runtime.BaseAPI implements Computeresou
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -175,7 +175,7 @@ export class ComputeresourcesApi extends runtime.BaseAPI implements Computeresou
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -240,7 +240,7 @@ export class ComputeresourcesApi extends runtime.BaseAPI implements Computeresou
             queryParameters['plugin_id'] = requestParameters['pluginId'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);

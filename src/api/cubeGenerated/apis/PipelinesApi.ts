@@ -841,7 +841,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -885,9 +885,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -932,9 +932,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -979,7 +979,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1022,7 +1022,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1066,9 +1066,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1113,7 +1113,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1157,9 +1157,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1204,7 +1204,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1249,7 +1249,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1301,7 +1301,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1353,7 +1353,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1397,7 +1397,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1449,7 +1449,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1493,7 +1493,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1570,7 +1570,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['owner_username'] = requestParameters['ownerUsername'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1614,9 +1614,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1662,7 +1662,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1706,7 +1706,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1746,7 +1746,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
 
         const queryParameters: any = {};
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1818,7 +1818,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['uploader_username'] = requestParameters['uploaderUsername'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1862,7 +1862,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1906,9 +1906,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -1960,9 +1960,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2007,9 +2007,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2054,7 +2054,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2098,7 +2098,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2150,7 +2150,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2202,7 +2202,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['offset'] = requestParameters['offset'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2246,7 +2246,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2307,7 +2307,7 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['title'] = requestParameters['title'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
@@ -2351,9 +2351,9 @@ export class PipelinesApi extends runtime.BaseAPI implements PipelinesApiInterfa
             queryParameters['format'] = requestParameters['format'];
         }
 
-        const headerParameters: runtime.HTTPHeaders = {};
+        const headerParameters: runtime.HTTPHeaders = {Accept: 'application/json'};
 
-        headerParameters['Content-Type'] = 'application/vnd.collection+json';
+        headerParameters['Content-Type'] = 'application/json';
 
         if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
             headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
