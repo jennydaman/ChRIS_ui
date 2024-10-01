@@ -4,10 +4,39 @@ import WrapperConnect from "../Wrapper";
 import PluginCatalog from "./PluginCatalog";
 import "./plugin-catalog.css";
 import { InfoSection } from "../Common";
+import { Configuration, PluginsApi } from "../../api/cubeGenerated";
 
 const CatalogPage = () => {
   React.useEffect(() => {
     document.title = "Analysis Catalog";
+  }, []);
+
+  React.useEffect(() => {
+    const config = new Configuration({
+      username: "chris",
+      password: "chris1234",
+      basePath: "http://localhost:8000",
+    });
+    const pluginsApi = new PluginsApi(config);
+
+    (async () => {
+      const name = "pl-mri10yr06mo01da_normal";
+      const search = await pluginsApi.pluginsSearchList({ nameExact: name });
+      console.dir(search);
+      const plugin = (search.results ?? [])[0];
+      if (!plugin) {
+        console.log(`${name} not found`);
+        return;
+      }
+      const pluginInstance = await pluginsApi.pluginsInstancesCreate({
+        id: plugin.id,
+        pluginInstanceRequest: {
+          computeResourceName: "host",
+          title: "typescript is fun",
+        },
+      });
+      console.log(`created plugin instance ID=${pluginInstance.id}`);
+    })();
   }, []);
 
   const TitleComponent = (
