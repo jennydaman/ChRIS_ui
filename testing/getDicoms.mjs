@@ -50,7 +50,7 @@ function runUtils(workDir, args) {
  */
 function getHere() {
   return childProcess
-    .execFileSync("npm", ["prefix"], { encoding: "utf-8" })
+    .execFileSync("pnpm", ["prefix"], { encoding: "utf-8" })
     .trim();
 }
 
